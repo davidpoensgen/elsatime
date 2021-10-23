@@ -59,8 +59,8 @@
   display: inline-block;
   width: 12em;
   height: 10em;
-  font-size: .3em; /* control icon size here */
-    transform: translateY(-3.8em);
+  font-size: .26em; /* control icon size here */
+    transform: translateY(-3.3em);
 }
 
 .cloud {
@@ -206,6 +206,7 @@
   border-left: 0.375em solid;
 }
 
+.text{font-size: .66em}
 
 /* Animations */
 
@@ -311,7 +312,9 @@ box-shadow: inset 0.2em 0.2em #cc0000, inset -.2em -.2em #cc0000;}
         top.classList.add("weather")
         let mid = outer.appendChild(document.createElement("div"))
         mid.classList.add("leap-color")
-        let bot = outer.appendChild(document.createElement("div")).innerHTML=week
+        let bot = outer.appendChild(document.createElement("div"))
+        bot.classList.add("text")
+        bot.innerHTML=week
         if (black.includes(week)) {
             mid.classList.add("black")
         } else if (grey.includes(week)) {
