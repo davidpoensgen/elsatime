@@ -6,11 +6,13 @@
     <style type="text/css">
         body{
             font-family: 'Fira Mono';
+            width: 32em;
+            font-size: 2em;
         }
         .main {
             margin-left: auto;
             margin-right: auto;
-            max-width: 30em;
+            width: 30em;
             text-align: center;
         }
 
@@ -233,6 +235,10 @@
 .small{
     font-size: 9pt;
 }
+
+.name{
+    font-size: 20pt
+}
 .current{
 box-shadow: inset 0.2em 0.2em #cc0000, inset -.2em -.2em #cc0000;}
 
@@ -248,7 +254,7 @@ box-shadow: inset 0.2em 0.2em #cc0000, inset -.2em -.2em #cc0000;}
     <div class="main">
 
         <br>
-        elsa <br><br>
+        <span class="name">elsa</span> <br><br>
 
         <span id="months"></span> monate  <span id="month-days"></span> tage<br>
         <span class="small">oder<br></span>
@@ -260,14 +266,9 @@ box-shadow: inset 0.2em 0.2em #cc0000, inset -.2em -.2em #cc0000;}
 
         <br>
         <br>
+        <br>
+        <br>
         <div id="leaps">
-<!--            <div>-->
-<!--                <div>&#x1F329;</div><div class="color"></div><div>1</div>-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                <div></div><div class="color"></div><div>1</div>-->
-<!--            </div>-->
-
         </div>
 
     </div>
@@ -322,7 +323,7 @@ box-shadow: inset 0.2em 0.2em #cc0000, inset -.2em -.2em #cc0000;}
             top.innerHTML = '        <div class="icon thunder-storm"><div class="cloud"></div><div class="lightning">' +
                 '<div class="bolt"></div><div class="bolt"></div></div></div>'
         } else if (sun.includes(week)){
-            top.innerHTML = '<div class="main"><div class="icon sun-shower"><div class="cloud"></div>' +
+            top.innerHTML = '<div class="icon sun-shower"><div class="cloud"></div>' +
                 '<div class="sun"><div class="rays"></div></div></div>'
         }
         if (week == Math.floor(age_in_days_et / 7)){
